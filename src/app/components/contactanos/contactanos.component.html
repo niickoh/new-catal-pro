@@ -1,0 +1,152 @@
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo" style="width: 244px !important; height: 80px !important;">
+                        <img src="assets/images/logo_catal.png" style="width: 50%;" alt="">
+                    </a>
+                    <a href="" class="logo"><i class="fab fa-facebook"></i></a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li></li>
+                        <li><a href="" ><i class="fab fa-instagram" style="width: 100%;"></i></a></li>
+                        <li class="scroll-to-section"><a href="#top" class="active">Inicio</a></li>
+                        <li class="scroll-to-section"><a href="#services">Servicios</a></li>
+                        <li class="scroll-to-section"><a href="#about">¿Quienes Somos?</a></li>
+                        <li class="scroll-to-section"><a [routerLink]="['/contactanos']"  >Contáctanos</a></li>
+                        <!-- <li class="has-sub">
+                            <a href="javascript:void(0)">Pages</a>
+                            <ul class="sub-menu">
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="our-services.html">Our Services</a></li>
+                                <li><a href="contact-us.html">Contact Us</a></li>
+                            </ul>
+                        </li> -->
+                        <!-- <li class="scroll-to-section"><a href="#testimonials">Testimonials</a></li> -->
+                        <li><a href="contact-us.html">Agende su Asesoría ¡GRATIS!</a></li> 
+                    </ul>        
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->
+<div class="economic-banner">
+    <div class="marquee">
+      <div class="marquee-content">
+        @for ( indicator of economicIndicators; track $index) {
+            <div class="indicator-card">{{indicator.dolar.nombre}}: ${{indicator.dolar.valor}}</div>          
+            <div class="indicator-card">{{indicator.euro.nombre}}: ${{indicator.euro.valor}}</div>          
+            <div class="indicator-card">{{indicator.ipc.nombre}}: {{indicator.ipc.valor}}%</div>          
+            <div class="indicator-card">{{indicator.uf.nombre}}: ${{indicator.uf.valor}}</div>          
+            <div class="indicator-card">{{indicator.utm.nombre}}: ${{indicator.utm.valor}}</div>          
+            <div class="indicator-card">{{indicator.ivp.nombre}}: ${{indicator.ivp.valor}}</div>          
+            <div class="indicator-card">{{indicator.tpm.nombre}}: {{indicator.tpm.valor}}%</div>          
+        }
+      </div>
+      <div class="marquee-content">
+        @for ( indicator of economicIndicators; track $index) {
+            <div class="indicator-card">{{indicator.dolar.nombre}}: ${{indicator.dolar.valor}}</div>          
+            <div class="indicator-card">{{indicator.euro.nombre}}: ${{indicator.euro.valor}}</div>          
+            <div class="indicator-card">{{indicator.ipc.nombre}}: {{indicator.ipc.valor}}%</div>          
+            <div class="indicator-card">{{indicator.uf.nombre}}: ${{indicator.uf.valor}}</div>          
+            <div class="indicator-card">{{indicator.utm.nombre}}: ${{indicator.utm.valor}}</div>          
+            <div class="indicator-card">{{indicator.ivp.nombre}}: ${{indicator.ivp.valor}}</div>          
+            <div class="indicator-card">{{indicator.tpm.nombre}}: {{indicator.tpm.valor}}%</div>          
+        }
+      </div>
+    </div>
+  </div>
+<section class="map">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.9074947769914!2d-70.61661812357715!3d-33.425655996244245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf644301632b%3A0x6144f35c641cc38a!2sAv.%20Nueva%20Providencia%201881%2C%207500520%20Providencia%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1719786545521!5m2!1ses-419!2scl" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="col-lg-10 offset-lg-1">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="info-item">
+                <i class="fa fa-envelope"></i>
+                <h4>Email</h4>
+                <a href="#">{{'contacto@catalpro.cl'}}</a>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="info-item">
+                <i class="fa fa-phone"></i>
+                <h4>Teléfono</h4>
+                <a href="#">+56 9 4921 6770</a>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="info-item">
+                <i class="fa fa-map-marked-alt"></i>
+                <h4>Dirección</h4>
+                <a href="#">Av. Nueva Providencia 1881, Providencia</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-us-form">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h6>Contáctanos</h6>
+            <h4>No dude en enviarnos un mensaje</h4>
+          </div>
+        </div>
+        <div class="col-lg-10 offset-lg-1">
+          <form id="contact" action="" method="post">
+            <div class="row">
+              <div class="col-lg-6">
+                <fieldset>
+                  <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                  <input type="phone" name="phone" id="phone" placeholder="Your Phone..." autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                  <input type="subject" name="subject" id="subject" placeholder="Subject..." autocomplete="on" >
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="orange-button">Send Message</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <app-footer></app-footer>
