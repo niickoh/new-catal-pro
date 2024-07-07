@@ -30,7 +30,9 @@
               "src/vendor/bootstrap/css/bootstrap.min.css",
               "node_modules/swiper/swiper-bundle.min.css",
               "node_modules/ngx-spinner/animations/ball-scale-multiple.css",
-              "node_modules/ngx-toastr/toastr.css"
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": [
               "src/assets/js/swiper.js",
@@ -100,5 +102,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "2df3e40f-eda9-4bce-813c-5b56c3efb35e"
   }
 }

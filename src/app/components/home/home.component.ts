@@ -12,6 +12,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from '../layout/footer/footer.component';
+import { HeaderComponent } from '../layout/header/header.component';
 
 @Component({
   selector: 'app-home',
@@ -23,7 +24,8 @@ import { FooterComponent } from '../layout/footer/footer.component';
     RouterModule,
     FooterComponent,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HeaderComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

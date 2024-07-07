@@ -1,1 +1,40 @@
-<p>header works!</p>
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo" style="width: 244px !important; height: 80px !important;">
+                        <img src="assets/images/logo_catal.png" style="width: 50%;" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li><a href="" class="logo"><i class="fab fa-facebook"></i></a></li>
+                      
+                        <li><a href="" ><i class="fab fa-instagram" style="width: 100%;"></i></a></li>
+                        <li class="scroll-to-section"><a href="#top" class="active">Inicio</a></li>
+                        <li class="scroll-to-section"><a href="#services">Servicios</a></li>
+                        <li class="scroll-to-section"><a href="#about">¿Quienes Somos?</a></li>
+                        <li class="scroll-to-section"><a [routerLink]="['/contactanos']"  >Contáctanos</a></li>
+                        <li class="scroll-to-section"><a [routerLink]="['/propiedades']"  >Propiedades</a></li>
+                        <!-- <li class="has-sub">
+                            <a href="javascript:void(0)">Pages</a>
+                            <ul class="sub-menu">
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="our-services.html">Our Services</a></li>
+                                <li><a href="contact-us.html">Contact Us</a></li>
+                            </ul>
+                        </li> -->
+                        <!-- <li class="scroll-to-section"><a href="#testimonials">Testimonials</a></li> -->
+                        <li><a href="contact-us.html">Agende su Asesoría ¡GRATIS!</a></li> 
+                    </ul>        
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
