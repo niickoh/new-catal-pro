@@ -19,10 +19,91 @@
         </mat-grid-list>
       }
       @if (tipoSeleccionado == 'venta') {
-        <mat-grid-list cols="2" rowHeight="1:1">
-          <mat-grid-tile>1</mat-grid-tile>
-          <mat-grid-tile>2</mat-grid-tile>
-        </mat-grid-list>
+        <div class="responsive-grid">
+          <mat-card class="example-card" appearance="outlined">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Región Metropolitana</mat-card-title>
+              <mat-card-subtitle>Santiago</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="../../../assets/images/propiedades/casa-pudahuel-1.jpeg" alt="dpto-nuble" style="width: 100% !important; height: 257px !important;">
+            <mat-card-content>
+              <h2 class="mt-4">$415.000</h2>
+              <p>
+                Arriendo departamento ubicado en la comuna de Santiago, a pasos de Metro Ñuble, Av. Vicuña Mackenna, Portal Ñuñoa.
+
+              </p>
+              <mat-chip-set aria-label="Dog selection">
+                <mat-chip [style]="{'background': 'green','border':'none','color':'white'}">
+                  <img
+                    matChipAvatar
+                    src="../../../assets/images/check.svg"
+                    alt="check"
+                  />
+                  En Arriendo
+                </mat-chip>
+              </mat-chip-set>
+              <div class="row mt-3">
+                <div class="col-4 d-flex flex-row align-items-center gap-3">
+                  <img src="../../../assets/images/bed.svg" style="width: 40px;" alt="">
+                  <p class="p-0 m-0">2 dormitorios</p>
+                </div>
+                <div class="col-4 d-flex flex-row align-items-center gap-3">
+                  <img src="../../../assets/images/shower.svg" style="width: 40px;" alt="">
+                  <p class="p-0 m-0">1 baño</p>
+                </div>
+                <div class="col-4 d-flex flex-row align-items-center gap-3">
+                  <img src="../../../assets/images/bodega.svg" style="width: 40px;" alt="">
+                  <p class="p-0 m-0">1 bodega</p>
+                </div>
+              </div>
+            </mat-card-content>
+            <mat-card-actions class="p-3 justify-content-end gap-2">
+              <button mat-raised-button [routerLink]="['/detalle-propiedad']">Ver Propiedad</button>
+              <button mat-raised-button [style]="{'background':'#0d6efd','color':'white'}" (click)="contacto()">Arrendar</button>
+            </mat-card-actions>
+          </mat-card>
+          <mat-card class="example-card" appearance="outlined">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Región Metropiltana</mat-card-title>
+              <mat-card-subtitle>Quinta Normal</mat-card-subtitle>
+            </mat-card-header>
+            <div style="height: 257px ;">
+              <img mat-card-image src="../../../assets/images/propiedades/dpto-qta-normal-1.jpg" alt="dpto-nuble" style="width: 100% !important; height: 257px !important;">
+            </div>
+            <mat-card-content>
+              <h2 class="mt-4">$360.000</h2>
+              <p>
+                Arriendo departamento ubicado en la comuna de Quinta Normal, buena conectividad, locomoción colectiva en la puerta del edificio.
+              </p>
+              <mat-chip-set aria-label="Dog selection">
+                <mat-chip [style]="{'background': 'orange','border':'none','color':'white'}">
+                  <img
+                    matChipAvatar
+                    src="../../../assets/images/check.svg"
+                    alt="check"
+                  />
+                  Arrendada
+                </mat-chip>
+              </mat-chip-set>
+              <div class="row mt-3">
+                <div class="col-4 d-flex flex-row align-items-center gap-3">
+                  <img src="../../../assets/images/bed.svg" style="width: 40px;" alt="">
+                  <p class="p-0 m-0">2 dormitorios</p>
+                </div>
+                <div class="col-4 d-flex flex-row align-items-center gap-3">
+                  <img src="../../../assets/images/shower.svg" style="width: 40px;" alt="">
+                  <p class="p-0 m-0">1 baño</p>
+                </div>
+              </div>
+            </mat-card-content>
+            <mat-card-actions class="p-3 justify-content-end gap-2">
+              <!-- <button mat-raised-button>Ver Propiedad</button> -->
+              <button mat-raised-button [style]="{'background':'#0d6efd','color':'white'}" (click)="contacto()" [disabled]="true">Arrendar</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
       }
       @if (tipoSeleccionado == 'arriendo') {
         <div class="responsive-grid">
@@ -64,8 +145,9 @@
                 </div>
               </div>
             </mat-card-content>
-            <mat-card-actions class="p-3 justify-content-end">
-              <button mat-raised-button [style]="{'background':'#0d6efd','color':'white'}">Arrendar</button>
+            <mat-card-actions class="p-3 justify-content-end gap-2">
+              <!-- <button mat-raised-button>Ver Propiedad</button> -->
+              <button mat-raised-button [style]="{'background':'#0d6efd','color':'white'}" (click)="contacto()">Arrendar</button>
             </mat-card-actions>
           </mat-card>
           <mat-card class="example-card" appearance="outlined">
@@ -78,13 +160,34 @@
               <img mat-card-image src="../../../assets/images/propiedades/dpto-qta-normal-1.jpg" alt="dpto-nuble" style="width: 100% !important; height: 257px !important;">
             </div>
             <mat-card-content>
+              <h2 class="mt-4">$360.000</h2>
               <p>
                 Arriendo departamento ubicado en la comuna de Quinta Normal, buena conectividad, locomoción colectiva en la puerta del edificio.
               </p>
+              <mat-chip-set aria-label="Dog selection">
+                <mat-chip [style]="{'background': 'orange','border':'none','color':'white'}">
+                  <img
+                    matChipAvatar
+                    src="../../../assets/images/check.svg"
+                    alt="check"
+                  />
+                  Arrendada
+                </mat-chip>
+              </mat-chip-set>
+              <div class="row mt-3">
+                <div class="col-4 d-flex flex-row align-items-center gap-3">
+                  <img src="../../../assets/images/bed.svg" style="width: 40px;" alt="">
+                  <p class="p-0 m-0">2 dormitorios</p>
+                </div>
+                <div class="col-4 d-flex flex-row align-items-center gap-3">
+                  <img src="../../../assets/images/shower.svg" style="width: 40px;" alt="">
+                  <p class="p-0 m-0">1 baño</p>
+                </div>
+              </div>
             </mat-card-content>
-            <mat-card-actions>
-              <button mat-button>LIKE</button>
-              <button mat-button>SHARE</button>
+            <mat-card-actions class="p-3 justify-content-end gap-2">
+              <!-- <button mat-raised-button>Ver Propiedad</button> -->
+              <button mat-raised-button [style]="{'background':'#0d6efd','color':'white'}" (click)="contacto()" [disabled]="true">Arrendar</button>
             </mat-card-actions>
           </mat-card>
         </div>

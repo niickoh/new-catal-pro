@@ -1,2 +1,33 @@
 <app-header></app-header>
+
+<section class="services" id="services">
+  <div class="container" style="margin-bottom: 15% !important;">
+    @if (tipoSeleccionado != '') {
+      <div class="row mb-3">
+        <div class="example-button-row">
+          <button mat-raised-button (click)="tipoPropiedad('')">Volver</button>
+        </div>
+      </div>
+    }
+    <div class="container">
+        <div class="row">
+            <mat-grid-list cols="3" rowHeight="150px">
+                @for (tile of tiles; track tile) {
+                  <mat-grid-tile
+                    
+                    [colspan]="tile.cols"
+                    [rowspan]="tile.rows"
+                    ><p-image 
+                    [src]="tile.image" 
+                    alt="Image" 
+                    width="250" />
+                </mat-grid-tile>
+                }
+              </mat-grid-list>
+        </div>
+    </div>
+
+  </div>
+</section>
+
 <app-footer></app-footer>
