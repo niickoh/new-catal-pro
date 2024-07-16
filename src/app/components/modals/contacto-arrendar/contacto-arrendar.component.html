@@ -1,0 +1,49 @@
+<div class="modal-header border-left">
+    <div class="modal-title"><h2>Contáctanos - {{titulo}}</h2></div>
+    <a type="button" class="btn-close" aria-label="Close" (click)="activeModal.close({ estado: false})"></a>
+</div>
+<div class="modal-body">
+    <div class="container">
+        <div class="row">            
+          <div class="col-lg-12">
+            <div class="section-heading mb-4">
+              <!-- <h6>Envíanos un mensaje para arrendar la propiedad</h6> -->
+               <h6>{{eslogan}}</h6>
+              <!-- <p>Envíanos un mensaje para arrendar la propiedad</p> -->
+            </div>
+            <form id="calculate" [formGroup]="formContacto">
+              <div class="row">
+                <div class="col-lg-6">
+                  <fieldset>
+                    <label for="nombreCompleto">Nombre Completo</label>
+                    <input type="nombreCompleto" name="nombreCompleto" id="nombreCompleto" formControlName="nombreCompleto" placeholder="Ej: Juan Perez" autocomplete="on" required>
+                  </fieldset>
+                </div>
+                <div class="col-lg-6">
+                  <fieldset>
+                    <label for="email">Correo</label>
+                    <input type="text" name="email" id="email" formControlName="email" pattern="[^ @]*@[^ @]*" placeholder="Ej: ejemplo@ejemplo.cl" required="">
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <label for="telefono">Teléfono</label>
+                    <input type="telefono" name="telefono" id="telefono" formControlName="telefono" placeholder="Ej: +56912345678" autocomplete="on" >
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" formControlName="mensaje" placeholder="Mensaje..."></textarea>
+                </fieldset>
+                </div>
+                
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+</div>
+<div class="modal-footer">
+    <button mat-raised-button [style]="{'background':'#0d6efd','color':'white'}" (click)="enviarMensaje()">Enviar Mensaje</button>
+</div>

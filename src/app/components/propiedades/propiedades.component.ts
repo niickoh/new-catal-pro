@@ -11,6 +11,8 @@ import {MatCardModule} from '@angular/material/card';
 import { BadgeModule } from 'primeng/badge';
 import { ButtonModule } from 'primeng/button';
 import {MatChipsModule} from '@angular/material/chips';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ContactoArrendarComponent } from '../modals/contacto-arrendar/contacto-arrendar.component';
 
 
 @Component({
@@ -35,8 +37,13 @@ import {MatChipsModule} from '@angular/material/chips';
 export class PropiedadesComponent {
   tipoSeleccionado:string = '';
 
-
+  constructor(
+    private modalService: NgbModal
+  ) {}
   tipoPropiedad(tipoPropiedad: string = '') {
     this.tipoSeleccionado = tipoPropiedad;
+  }
+  contacto() {
+    const modalRef = this.modalService.open(ContactoArrendarComponent, {backdrop: 'static', size: 'lg'});
   }
 }

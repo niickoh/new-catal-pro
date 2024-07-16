@@ -287,7 +287,8 @@ header
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  position: relative;
+  /* position: relative; */
+  position: absolute;
   z-index: 999;
 }
 
@@ -562,6 +563,10 @@ header
 }
 
 @media (max-width: 1200px) {
+  
+}
+
+@media (max-width: 767px) {
   .header-area .main-nav .nav li {
     padding-left: 10px;
     padding-right: 10px;
@@ -569,9 +574,6 @@ header
   .header-area .main-nav:before {
     display: none;
   }
-}
-
-@media (max-width: 767px) {
   .header-area .main-nav .logo {
     color: #1e1e1e;
   }
@@ -813,6 +815,9 @@ section.services {
 
 .services .service-item:hover i {
   margin-top: 15px;
+}
+.service-item:hover {
+  cursor: pointer;
 }
 
 .services .service-item h4 {
@@ -1637,7 +1642,7 @@ body {
     display: inline-block;
   }
   .header-area {
-    background-color: #212741;
+    background-color: transparent;
   }
   .slide-inner .header-text {
     width: 80%;

@@ -1,0 +1,7 @@
+p-image {
+    width: 100%;
+    height: 100%;
+  }
+  p-image:hover, mat-grid-tile:hover {
+      cursor: pointer;
+  }

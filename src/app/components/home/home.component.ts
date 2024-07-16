@@ -13,6 +13,8 @@ import { ToastrService } from 'ngx-toastr';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from '../layout/footer/footer.component';
 import { HeaderComponent } from '../layout/header/header.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ContactoArrendarComponent } from '../modals/contacto-arrendar/contacto-arrendar.component';
 
 @Component({
   selector: 'app-home',
@@ -38,7 +40,8 @@ export class HomeComponent implements AfterViewInit {
     private servicios: ServiciosService,
     private spinner: NgxSpinnerService,
     private formBuilder: FormBuilder,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private modalService: NgbModal
   ) {
     this.formContacto = this.formBuilder.group({
       nombreCompleto: [null],
@@ -138,5 +141,10 @@ export class HomeComponent implements AfterViewInit {
         this.spinner.hide();        
       }
     });
+  }
+  formularioContacto(servicio:string = '', eslogan:string = '') {
+    const modalRef = this.modalService.open(ContactoArrendarComponent, {backdrop: 'static', size: 'lg'});
+    modalRef.componentInstance.titulo = servicio;
+    modalRef.componentInstance.eslogan = eslogan;
   }
 }
