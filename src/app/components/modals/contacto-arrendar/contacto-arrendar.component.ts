@@ -1,13 +1,17 @@
 import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { HttpErrorResponse } from '@angular/common/http';
+
 import { MatButtonModule } from '@angular/material/button';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { NgxSpinnerService } from 'ngx-spinner';
-import { MessageService } from 'primeng/api';
-import { ServiciosService } from '../../../services/servicios.service';
-import { HttpErrorResponse } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
+import { ToastModule } from 'primeng/toast';
 
+import { MessageService } from 'primeng/api';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { ServiciosService } from '../../../services/servicios.service';
+import { RippleModule } from 'primeng/ripple';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-contacto-arrendar',
   standalone: true,
@@ -15,7 +19,9 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    ToastModule,
+    RippleModule
   ],
   templateUrl: './contacto-arrendar.component.html',
   styleUrl: './contacto-arrendar.component.css',
@@ -36,7 +42,8 @@ export class ContactoArrendarComponent {
     public activeModal: NgbActiveModal,
     private spinner: NgxSpinnerService,
     private messageService: MessageService,
-    private servicios: ServiciosService
+    private servicios: ServiciosService,
+    private toastr: ToastrService
   ) {
     this.formContacto = this.formBuilder.group({
       nombreCompleto: ['', Validators.required],
@@ -49,11 +56,12 @@ export class ContactoArrendarComponent {
   enviarMensaje() {
     this.spinner.show();
     console.log('datos formulario', this.formContacto);
-    if (!this.formContacto.value.nombreCompleto || !this.formContacto.value.email || 
+    if (!this.formContacto.value.nombreCompleto || !this.formContacto.value.email ||
         !this.formContacto.value.telefono || !this.formContacto.value.mensaje) {
-          this.spinner.hide();   
+          this.spinner.hide();
           this.submitForm = true;
-          this.messageService.add({ severity: 'error', summary: '¡Error!', detail: 'Debes completar el formulario para enviar el mensaje' });
+          // this.messageService.add({ severity: 'error', summary: '¡Error!', detail: 'Debes completar el formulario para enviar el mensaje' });
+          this.toastr.error("Debes completar el formulario para enviar el mensaje");
           return;
         }
     const datos = {
@@ -74,7 +82,7 @@ export class ContactoArrendarComponent {
       },
       error: (error:HttpErrorResponse) => {
         console.log('error', error);
-        this.spinner.hide();        
+        this.spinner.hide();
       }
     });
   }

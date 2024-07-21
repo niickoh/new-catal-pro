@@ -15,6 +15,7 @@ import { FooterComponent } from '../layout/footer/footer.component';
 import { HeaderComponent } from '../layout/header/header.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ContactoArrendarComponent } from '../modals/contacto-arrendar/contacto-arrendar.component';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-home',
@@ -30,7 +31,8 @@ import { ContactoArrendarComponent } from '../modals/contacto-arrendar/contacto-
     HeaderComponent
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
+  providers: [MessageService]
 })
 export class HomeComponent implements AfterViewInit {
   economicIndicators: any[] = [];

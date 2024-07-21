@@ -1,10 +1,13 @@
+<div class="card flex justify-content-center">
+  <p-toast />
+</div>
 <div class="modal-header border-left">
     <div class="modal-title"><h2>Contáctanos - {{titulo}}</h2></div>
     <a type="button" class="btn-close" aria-label="Close" (click)="activeModal.close({ estado: false})"></a>
 </div>
 <div class="modal-body">
     <div class="container">
-        <div class="row">            
+        <div class="row">
           <div class="col-lg-12">
             <div class="section-heading mb-4">
               <!-- <h6>Envíanos un mensaje para arrendar la propiedad</h6> -->
@@ -16,7 +19,7 @@
                 <div class="col-lg-6">
                   <fieldset>
                     <label for="nombreCompleto">Nombre Completo</label>
-                    <input type="nombreCompleto" name="nombreCompleto" id="nombreCompleto" formControlName="nombreCompleto" placeholder="Ej: Juan Perez" autocomplete="on" required>
+                    <input type="text" name="nombreCompleto" id="nombreCompleto" formControlName="nombreCompleto" placeholder="Ej: Juan Perez" autocomplete="on" required>
                   </fieldset>
                 </div>
                 <div class="col-lg-6">
@@ -28,7 +31,7 @@
                 <div class="col-lg-12">
                   <fieldset>
                     <label for="telefono">Teléfono</label>
-                    <input type="telefono" name="telefono" id="telefono" formControlName="telefono" placeholder="Ej: +56912345678" autocomplete="on" >
+                    <input type="text" name="telefono" id="telefono" formControlName="telefono" placeholder="Ej: +56912345678" autocomplete="on" >
                   </fieldset>
                 </div>
                 <div class="col-lg-12">
@@ -37,7 +40,7 @@
                     <textarea name="mensaje" id="mensaje" formControlName="mensaje" placeholder="Mensaje..."></textarea>
                 </fieldset>
                 </div>
-                
+
               </div>
             </form>
           </div>

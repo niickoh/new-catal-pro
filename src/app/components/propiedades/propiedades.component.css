@@ -24,7 +24,7 @@ h2 {
   }
   .example-card {
     max-width: 100%;
-    height: 620px;
+    height: 665px;
   }
 
   .example-header-image {
@@ -55,4 +55,7 @@ h2 {
   }
 ::ng-deep mat-chip .mat-mdc-chip-action-label {
   color: white !important;
+}
+.mdc-card__media:hover {
+  cursor: pointer !important;
 }
