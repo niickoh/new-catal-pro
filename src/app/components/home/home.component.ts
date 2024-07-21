@@ -107,7 +107,7 @@ export class HomeComponent implements AfterViewInit {
       },
       error: error => {
         console.log('error', error);
-        
+
       }
     });
   }
@@ -115,9 +115,9 @@ export class HomeComponent implements AfterViewInit {
   enviarMensaje() {
     this.spinner.show();
     console.log('datos formulario', this.formContacto);
-    if (!this.formContacto.value.nombreCompleto || !this.formContacto.value.email || 
+    if (!this.formContacto.value.nombreCompleto || !this.formContacto.value.email ||
         !this.formContacto.value.telefono || !this.formContacto.value.mensaje) {
-          this.spinner.hide();   
+          this.spinner.hide();
           this.toastr.error("Debes completar el formulario para enviar el mensaje")
           return;
         }
@@ -138,7 +138,7 @@ export class HomeComponent implements AfterViewInit {
       },
       error: (error:HttpErrorResponse) => {
         console.log('error', error);
-        this.spinner.hide();        
+        this.spinner.hide();
       }
     });
   }

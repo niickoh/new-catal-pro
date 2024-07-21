@@ -7,6 +7,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes), provideAnimationsAsync(),
@@ -14,7 +15,8 @@ export const appConfig: ApplicationConfig = {
       HttpClientModule,
       BrowserAnimationsModule,
       ToastrModule.forRoot(),
-      FlexLayoutModule
+      FlexLayoutModule,
+      NgxSpinnerModule
     )
   ]
 };
