@@ -1,4 +1,4 @@
-<header class="header-area header-sticky background-header">
+<header class="header-area header-sticky">
   <div class="container">
       <div class="row">
           <div class="col-12">
@@ -150,28 +150,28 @@
 <section class="services" id="services">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <div class="service-item" (click)="formularioContacto('Venta de Propiedades', 'Envíanos un mensaje para Vender/Comprar una propiedad.')">
           <i class="fas fa-dollar"></i>
           <h4>Venta de Propiedades</h4>
           <p>Vende tu propiedad.</p>
         </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <div class="service-item" (click)="formularioContacto('Arriendo de Propiedades', 'Envíanos un mensaje si quieres arrendar o tienes una propiedad en arriendo.')">
           <i class="fas fa-home"></i>
           <h4>Arriendo de Propiedades</h4>
           <p>Arrienda tu propiedad.</p>
         </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <div class="service-item" (click)="formularioContacto('Administración de propiedades', 'Envíanos un mensaje si deseas asesoría de administración.')">
           <i class="fas fa-chart-bar"></i>
           <h4>Administración de propiedades</h4>
           <p>Administra tu propiedad.</p>
         </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <div class="service-item" (click)="formularioContacto('Contratos', 'Envíanos un mensaje y te enviaremos el contrato que necesites.')">
           <i class="fas fa-file"></i>
           <h4>Contratos</h4>
@@ -185,11 +185,11 @@
 <section class="simple-cta">
   <div class="container">
     <div class="row">
-      <div class="col-lg-5">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
         <!-- <h4>Business <em>Solutions</em> and <strong>Crypto</strong> Investments</h4> -->
         <h4>Ofrecemos <em>Soluciones</em> a <strong>medida</strong> para la venta y arriendo de tu propiedad</h4>
       </div>
-      <div class="col-lg-7">
+      <div class="col-12 col-sm-12 col-md-8 col-lg-7 col-xl-7">
         <div class="buttons">
           <!-- <div class="green-button">
             <a href="#">Discover More</a>
@@ -206,18 +206,18 @@
 <section class="top-section about-us" id="about">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 offset-lg-3">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 offset-lg-3">
         <div class="section-heading">
           <h6>Sobre Nosotros</h6>
             <h4>Conócenos mejor</h4>
         </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <div class="left-image">
           <img src="assets/images/img-quienes-somos.jpeg" alt="">
         </div>
       </div>
-      <div class="col-lg-6 align-self-center">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 align-self-center">
         <div>
           <p>En Catalpro, somos expertos en la venta, arriendo y administración de propiedades. Con más de 5 años de experiencia
             en el sector inmobiliario, ofrecemos un servicio profesional y personalizado que se adapta a tus necesidades. Nos
@@ -241,43 +241,43 @@
 <section id="contactanos" class="calculator">
   <div class="container">
     <div class="row">
-      <div class="col-lg-7">
+      <div class="col-12 col-sm-12 col-md-8 col-lg-7 col-xl-7">
         <div class="left-image">
           <img src="assets/images/calculator-image.png" alt="">
         </div>
       </div>
-      <div class="col-lg-5">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
         <div class="section-heading">
           <!-- <h6>Your Freedom</h6> -->
           <h2>Contáctanos</h2>
         </div>
         <form id="calculate" [formGroup]="formContacto">
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
               <fieldset>
                 <label for="nombreCompleto">Nombre Completo</label>
                 <input type="nombreCompleto" name="nombreCompleto" id="nombreCompleto" formControlName="nombreCompleto" placeholder="" autocomplete="on" required>
               </fieldset>
             </div>
-            <div class="col-lg-6">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
               <fieldset>
                 <label for="email">Correo</label>
                 <input type="text" name="email" id="email" formControlName="email" pattern="[^ @]*@[^ @]*" placeholder="" required="">
               </fieldset>
             </div>
-            <div class="col-lg-12">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <fieldset>
                 <label for="telefono">Teléfono</label>
                 <input type="telefono" name="telefono" id="telefono" formControlName="telefono" placeholder="" autocomplete="on" >
               </fieldset>
             </div>
-            <div class="col-lg-12">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <fieldset>
                 <label for="mensaje" class="form-label">Mensaje</label>
                 <textarea name="mensaje" id="mensaje" formControlName="mensaje"></textarea>
             </fieldset>
             </div>
-            <div class="col-lg-12">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <fieldset>
                 <button type="submit" id="form-submit" class="orange-button">Enviar Mensaje</button>
               </fieldset>
