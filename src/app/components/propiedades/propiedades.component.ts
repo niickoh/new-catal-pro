@@ -41,9 +41,11 @@ export class PropiedadesComponent implements OnInit {
   tipoSeleccionado:string = '';
   displayNuble: boolean = false;
   displayLaRioja: boolean = false;
+  displayPudahuel: boolean = false;
 
   imagesNuble: any;
   imagesLaRioja: any;
+  imagesPudahuel: any;
 
   responsiveOptions: any[] = [
     {
@@ -121,6 +123,38 @@ export class PropiedadesComponent implements OnInit {
         thumbnailImageSrc: '../../../assets/images/propiedades/casa-larioja-4.jpg',
         alt: 'Imagen 4',
         title: 'Casa-4'
+      }
+    ];
+    this.imagesPudahuel = [
+      {
+        itemImageSrc: '../../../assets/images/propiedades/casa-pudahuel-1.jpeg',
+        thumbnailImageSrc: '../../../assets/images/propiedades/casa-pudahuel-1.jpeg',
+        alt: 'Imagen 1',
+        title: 'Casa-1'
+      },
+      {
+        itemImageSrc: '../../../assets/images/propiedades/casa-pudahuel-2.jpeg',
+        thumbnailImageSrc: '../../../assets/images/propiedades/casa-pudahuel-2.jpeg',
+        alt: 'Imagen 2',
+        title: 'Casa-2'
+      },
+      {
+        itemImageSrc: '../../../assets/images/propiedades/casa-pudahuel-3.jpeg',
+        thumbnailImageSrc: '../../../assets/images/propiedades/casa-pudahuel-3.jpeg',
+        alt: 'Imagen 3',
+        title: 'Casa-3'
+      },
+      {
+        itemImageSrc: '../../../assets/images/propiedades/casa-pudahuel-4.jpeg',
+        thumbnailImageSrc: '../../../assets/images/propiedades/casa-pudahuel-4.jpeg',
+        alt: 'Imagen 4',
+        title: 'Casa-4'
+      },
+      {
+        itemImageSrc: '../../../assets/images/propiedades/casa-pudahuel-5.jpeg',
+        thumbnailImageSrc: '../../../assets/images/propiedades/casa-pudahuel-5.jpeg',
+        alt: 'Imagen 5',
+        title: 'Casa-5'
       }
     ];
 

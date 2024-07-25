@@ -101,13 +101,35 @@
               <mat-card-title>Región Metropiltana</mat-card-title>
               <mat-card-subtitle>Pudahuel</mat-card-subtitle>
             </mat-card-header>
+            <p-galleria
+              [value]="imagesPudahuel"
+              [(visible)]="displayPudahuel"
+              [responsiveOptions]="responsiveOptions"
+              [containerStyle]="{ 'max-width': '50%' }"
+              [numVisible]="9"
+              [circular]="true"
+              [fullScreen]="true"
+              [showItemNavigators]="true">
+                  <ng-template pTemplate="item" let-item>
+                      <img
+                          [src]="item.itemImageSrc"
+                          style="width: 100%; display: block;" />
+                  </ng-template>
+                  <!-- <ng-template pTemplate="thumbnail" let-item>
+                      <div class="grid grid-nogutter justify-content-center">
+                          <img
+                              [src]="item.thumbnailImageSrc"
+                              style="display: block;" />
+                      </div>
+                  </ng-template> -->
+            </p-galleria>
             <div style="height: 257px ;">
-              <img mat-card-image src="../../../assets/images/propiedades/casa-pudahuel-1.jpeg" alt="dpto-nuble" style="width: 100% !important; height: 257px !important;">
+              <img mat-card-image (click)="displayPudahuel = true" src="../../../assets/images/propiedades/casa-pudahuel-1.jpeg" alt="dpto-nuble" style="width: 100% !important; height: 257px !important;">
             </div>
             <mat-card-content>
-              <h2 class="mt-4">Contáctanos para conocer el valor.</h2>
+              <h2 class="mt-4">UF 3.592</h2>
               <p>
-                Casa ubicada en la comuna de Pudahuel.
+                Se vende hermosa casa ubicada en la comuna de Pudahuel.
               </p>
               <mat-chip-set aria-label="Dog selection">
                 <mat-chip [style]="{'background': 'orange','border':'none','color':'white'}">
