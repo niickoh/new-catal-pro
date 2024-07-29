@@ -134,8 +134,7 @@ export class HomeComponent implements AfterViewInit {
     this.servicios.registro(datos).subscribe({
       next: res => {
         this.spinner.hide();
-        console.log('res.message', res.message);
-        this.toastr.success(res.message);
+        this.toastr.success("Datos de contacto enviado correctamente.");
         this.formContacto.reset();
       },
       error: (error:HttpErrorResponse) => {

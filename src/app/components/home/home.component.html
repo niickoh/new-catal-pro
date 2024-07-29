@@ -4,15 +4,15 @@
           <div class="col-12">
               <nav class="main-nav">
                   <!-- ***** Logo Start ***** -->
-                  <a href="index.html" class="logo" style="width: 244px !important; height: 47px !important;">
+                  <a href="index.html" class="logo col-3" style="width: 244px !important; height: 47px !important;">
                       <img src="assets/images/logo_catal.png" style="width: 50%;" alt="">
                   </a>
                   <!-- ***** Logo End ***** -->
                   <!-- ***** Menu Start ***** -->
-                  <ul class="nav">
-                    <li><a href="https://www.facebook.com/catalpro" class="logo"><i class="fab fa-facebook"></i></a></li>
+                  <ul class="nav col-10">
+                    <!-- <li><a href="https://www.facebook.com/catalpro" class="logo"><i class="fab fa-facebook"></i></a></li> -->
 
-                      <li><a href="https://www.instagram.com/catalpro.oficial/" ><i class="fab fa-instagram" style="width: 100%;"></i></a></li>
+                      <!-- <li><a href="https://www.instagram.com/catalpro.oficial/" ><i class="fab fa-instagram" style="width: 100%;"></i></a></li> -->
                       <li class="scroll-to-section"><a href="#top" class="active">Inicio</a></li>
                       <li class="scroll-to-section"><a href="#services">Servicios</a></li>
                       <li class="scroll-to-section"><a href="#about">¿Quienes Somos?</a></li>
@@ -279,7 +279,7 @@
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <fieldset>
-                <button type="submit" id="form-submit" class="orange-button">Enviar Mensaje</button>
+                <button type="submit" id="form-submit" class="orange-button" (click)="enviarMensaje()">Enviar Mensaje</button>
               </fieldset>
             </div>
           </div>

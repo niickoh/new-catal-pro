@@ -76,7 +76,8 @@ export class ContactoArrendarComponent {
       next: res => {
         this.spinner.hide();
         console.log('res.message', res.message);
-        this.messageService.add({ severity: 'success', summary: '¡Listo!', detail: res.message });
+        // this.messageService.add({ severity: 'success', summary: '¡Listo!', detail: res.message });
+        this.toastr.success("Datos de contacto enviado correctamente.");
         this.formContacto.reset();
         this.activeModal.close({estado: true});
       },
